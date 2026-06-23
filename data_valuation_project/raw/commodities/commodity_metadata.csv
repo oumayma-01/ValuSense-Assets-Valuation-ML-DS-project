@@ -1,0 +1,16 @@
+symbol,name,category,method,asset_class,recommended_method
+GC=F,Gold Futures,Precious Metals,Cost-of-Carry,Commodity,Cost-of-Carry
+SI=F,Silver Futures,Precious Metals,Cost-of-Carry,Commodity,Cost-of-Carry
+PL=F,Platinum Futures,Precious Metals,Cost-of-Carry,Commodity,Cost-of-Carry
+CL=F,Crude Oil WTI,Energy,Cost-of-Carry,Commodity,Cost-of-Carry
+BZ=F,Brent Crude,Energy,Cost-of-Carry,Commodity,Cost-of-Carry
+NG=F,Natural Gas,Energy,Cost-of-Carry,Commodity,Cost-of-Carry
+RB=F,RBOB Gasoline,Energy,Cost-of-Carry,Commodity,Cost-of-Carry
+ZC=F,Corn Futures,Agriculture,Cost-of-Carry,Commodity,Cost-of-Carry
+ZW=F,Wheat Futures,Agriculture,Cost-of-Carry,Commodity,Cost-of-Carry
+ZS=F,Soybean Futures,Agriculture,Cost-of-Carry,Commodity,Cost-of-Carry
+KC=F,Coffee Futures,Agriculture,Cost-of-Carry,Commodity,Cost-of-Carry
+CC=F,Cocoa Futures,Agriculture,Cost-of-Carry,Commodity,Cost-of-Carry
+HG=F,Copper Futures,Industrial Metals,Cost-of-Carry,Commodity,Cost-of-Carry
+GLD,Gold ETF (spot proxy),Precious Metals,Mark-to-Market,Commodity,Mark-to-Market
+USO,Oil ETF (spot proxy),Energy,Mark-to-Market,Commodity,Mark-to-Market

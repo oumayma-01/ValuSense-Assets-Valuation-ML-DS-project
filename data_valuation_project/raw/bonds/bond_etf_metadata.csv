@@ -1,0 +1,13 @@
+symbol,name,description,duration_bucket,credit_quality,yield_pct,expense_ratio,total_assets,nav_price,avg_volume,beta_3y,asset_class,recommended_method
+SHY,iShares 1-3 Year Treasury Bond ETF,1-3 Year Treasury,short,sovereign,0.037100002,,25434476544,81.95611,3944353,0.23,Bond,DCF
+IEI,iShares 3-7 Year Treasury Bond ETF,3-7 Year Treasury,medium,sovereign,0.036199998,,18490460160,117.13881,1512225,0.68,Bond,DCF
+IEF,iShares 7-10 Year Treasury Bond ETF,7-10 Year Treasury,medium-long,sovereign,0.0387,,48318722048,94.31379,8121359,1.17,Bond,DCF
+TLT,iShares 20+ Year Treasury Bond ETF,20+ Year Treasury,long,sovereign,0.045500003,,42895949824,86.67301,25920327,2.38,Bond,DCF
+TIP,iShares TIPS Bond ETF,TIPS (Inflation-Protected),medium,sovereign,0.028099999,,15087474688,109.23345,2130443,0.7,Bond,DCF
+LQD,iShares iBoxx $ Investment Grade Corporate Bond ETF,Investment Grade Corporate,medium,investment_grade,0.0452,,29782712320,109.04853,29768279,1.33,Bond,DCF
+HYG,iShares iBoxx $ High Yield Corporate Bond ETF,High Yield Corporate,medium,high_yield,0.0584,,16106322944,79.85091,41703669,0.65,Bond,DCF
+JNK,State Street SPDR Bloomberg High Yield Bond ETF,Junk Bonds,medium,high_yield,0.0659,,7700293120,96.29512,3770543,0.66,Bond,DCF
+BND,Vanguard Total Bond Market Index Fund,Total US Bond Market,medium,mixed,0.0394,,394429661184,73.3,8115096,0.98,Bond,DCF
+AGG,iShares Core U.S. Aggregate Bond ETF,US Aggregate Bond,medium,mixed,0.0396,,136455700480,98.83654,9134196,0.99,Bond,DCF
+BNDX,Vanguard Total International Bond Index Fund,International Bond (ex-US),medium,mixed,0.0446,,122032054272,48.31,4990224,0.62,Bond,DCF
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,Emerging Market Bonds,medium,emerging,0.0504,,14162584576,96.49885,7530348,1.06,Bond,DCF

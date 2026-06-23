@@ -1,0 +1,12 @@
+symbol,pair_name,asset_class,recommended_method
+EURUSD=X,EUR/USD,Currency,Interest Rate Parity / Forward Pricing
+GBPUSD=X,GBP/USD,Currency,Interest Rate Parity / Forward Pricing
+USDJPY=X,USD/JPY,Currency,Interest Rate Parity / Forward Pricing
+USDCHF=X,USD/CHF,Currency,Interest Rate Parity / Forward Pricing
+AUDUSD=X,AUD/USD,Currency,Interest Rate Parity / Forward Pricing
+USDCAD=X,USD/CAD,Currency,Interest Rate Parity / Forward Pricing
+NZDUSD=X,NZD/USD,Currency,Interest Rate Parity / Forward Pricing
+EURGBP=X,EUR/GBP,Currency,Interest Rate Parity / Forward Pricing
+EURJPY=X,EUR/JPY,Currency,Interest Rate Parity / Forward Pricing
+GBPJPY=X,GBP/JPY,Currency,Interest Rate Parity / Forward Pricing
+USDTND=X,USD/TND,Currency,Interest Rate Parity / Forward Pricing
