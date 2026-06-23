@@ -67,36 +67,36 @@ This framing ensures regulatory alignment before any model-specific recommendati
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                   FEATURE ENGINEERING                            │
+│                   FEATURE ENGINEERING                           │
 │  Market features  │  Risk metrics  │  Structural flags          │
-│  (price, volume,  │  (volatility,  │  (liquidity, data avail,  │
-│   bid-ask spread) │   VaR, beta)   │   IFRS level, maturity)   │
+│  (price, volume,  │  (volatility,  │  (liquidity, data avail,   │
+│   bid-ask spread) │   VaR, beta)   │   IFRS level, maturity)    │
 └──────────────────────────┬──────────────────────────────────────┘
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                  RECOMMENDATION ENGINE                           │
-│                                                                  │
+│                  RECOMMENDATION ENGINE                          │
+│                                                                 │
 │  ┌──────────────┐    ┌───────────────────┐    ┌──────────────┐  │
-│  │    Asset      │    │  IFRS 13 Filter   │    │  Valuation   │  │
-│  │ Classifier    │───▶│  (Level 1 → MtM)  │───▶│  Method      │  │
-│  │ (XGBoost)     │    │  (Level 2/3 →     │    │  Recommender │  │
-│  └──────────────┘    │   Model-based)     │    │  (XGBoost)   │  │
-│                       └───────────────────┘    └──────┬───────┘  │
-│                                                       │          │
-│                                                       ▼          │
-│                                              ┌──────────────┐    │
-│                                              │    SHAP       │    │
-│                                              │ Explainability│    │
-│                                              └──────────────┘    │
+│  │    Asset      │    │  IFRS 13 Filter   │    │  Valuation  │  │
+│  │ Classifier    │───▶│  (Level 1 → MtM)  │───▶│  Method    |  │
+│  │ (XGBoost)     │    │  (Level 2/3 →     │    │  Recommender │ │
+│  └──────────────┘    │   Model-based)     │    │  (XGBoost)   │ │
+│                       └───────────────────┘    └──────┬───────┘ │
+│                                                       │         │
+│                                                       ▼         │
+│                                              ┌──────────────┐   │
+│                                              │    SHAP       │  │
+│                                              │ Explainability│  │
+│                                              └────────────── ┘  │
 └──────────────────────────┬──────────────────────────────────────┘
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                     OUTPUT                                       │
-│  Recommended method + Confidence score + SHAP explanation        │
-│                                                                  │
-│  Supported methods:                                              │
+│                     OUTPUT                                      │
+│  Recommended method + Confidence score + SHAP explanation       │
+│                                                                 │
+│  Supported methods:                                             │
 │  DCF │ DDM │ Relative │ Black-Scholes │ Binomial Tree │         │
 │  Monte Carlo │ Cost-of-Carry │ Forward Pricing │                │
 │  Credit Model │ Mark-to-Market                                  │
@@ -128,7 +128,7 @@ This framing ensures regulatory alignment before any model-specific recommendati
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/ValuSense.git
+git clone https://github.com/oumayma-01/ValuSense-Assets-Valuation-ML-DS-project.git
 cd ValuSense
 
 # Create virtual environment
@@ -146,9 +146,9 @@ The data pipeline uses three free APIs. Get your keys and set them as environmen
 
 | Service | Free Tier | Get Key |
 |---------|-----------|---------|
-| **Alpha Vantage** | 25 requests/day | [alphavantage.co/support](https://www.alphavantage.co/support/#api-key) |
-| **Finnhub** | 60 requests/min | [finnhub.io/register](https://finnhub.io/register) |
-| **FRED** | 120 requests/min | [fred.stlouisfed.org/docs/api](https://fred.stlouisfed.org/docs/api/api_key.html) |
+| **Alpha Vantage** | 25 requests/day | [alphavantage.co/support](https://www.alphavantage.co/) |
+| **Finnhub** | 60 requests/min | [finnhub.io/register](https://finnhub.io/) |
+| **FRED** | 120 requests/min | [fred.stlouisfed.org/docs/api](https://fredaccount.stlouisfed.org/apikeys) |
 
 ```bash
 export ALPHA_VANTAGE_KEY="your_key_here"
