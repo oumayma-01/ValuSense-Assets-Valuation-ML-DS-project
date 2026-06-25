@@ -1,0 +1,15 @@
+Métrique,Valeur
+Instruments dans le catalogue,"353,749"
+Échantillons d'entraînement labellisés,"4,150"
+Nombre de features,14
+Nombre de classes cibles,10
+Classe majoritaire,DCF (1061)
+Classe minoritaire,Relative (243)
+Ratio d'imbalance,4.4:1
+Valeurs manquantes (maturity_years),1100 (26.5%)
+Tickers actions avec fondamentaux,50
+Contrats d'options collectés,"18,883"
+Séries FRED collectées,28
+Maturités courbe des taux,11
+Paires forex,11
+Instruments commodités,15
