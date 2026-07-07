@@ -1,0 +1,71 @@
+country,country_code,indicator,indicator_code,year,value
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,2.79318715363841
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,2.93436322440155
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,2.52421385073222
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,6.15202247867526
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,-2.081375977796
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,2.58382533052225
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,2.96650506701943
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,2.45762230126449
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,1.81945147909089
+United States,US,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,2.94555045227337
+United States,US,Lending interest rate,FR.INR.LEND,2021,3.25
+United States,US,Lending interest rate,FR.INR.LEND,2020,3.54416666666667
+United States,US,Lending interest rate,FR.INR.LEND,2019,5.2825
+United States,US,Lending interest rate,FR.INR.LEND,2018,4.90416666666667
+United States,US,Lending interest rate,FR.INR.LEND,2017,4.09666666666667
+United States,US,Lending interest rate,FR.INR.LEND,2016,3.51166666666667
+United States,US,Lending interest rate,FR.INR.LEND,2015,3.26
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,1.08027716858781
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,0.271650048355255
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,5.14970388522993
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,8.5431118453255
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,-10.047896637362
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,1.25629899760824
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,1.55133095078786
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,3.02322219840339
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,2.20652020635357
+United Kingdom,GB,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,2.14040560033371
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,1.19046798275883
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,1.43921494437743
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,2.71676264185913
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,6.88233783360239
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,-7.44064589948231
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,2.02744646419237
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,1.64590872395887
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,2.08361485997399
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,0.860031075424033
+France,FR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,1.06675474783462
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,-0.495851897260366
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,-0.869647578573321
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,1.8092581243061
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,3.90999994204108
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,-4.13191443239947
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,0.977734697038784
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,1.13569604599849
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,2.797906720551
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,2.22222216259371
+Germany,DE,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,1.66300602334775
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,-0.240084236041696
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,0.720785304749811
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,1.33164750653741
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,3.56419531474475
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,-4.28327942675573
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,-0.308496921143259
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,0.834143845965585
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,1.62345062245441
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,0.704986495111257
+Japan,JP,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,1.79997735783475
+Japan,JP,Lending interest rate,FR.INR.LEND,2017,0.994
+Japan,JP,Lending interest rate,FR.INR.LEND,2016,1.04475
+Japan,JP,Lending interest rate,FR.INR.LEND,2015,1.14283333333333
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2024,3.3276230893799
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2023,5.04512369812289
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2022,5.44122511322401
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2021,11.811094450607
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2020,1.80306247087255
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2019,1.30162365464503
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2018,3.46815306092219
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2017,7.82585730002594
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2016,3.32366508200445
+Turkey,TR,GDP growth (annual %),NY.GDP.MKTP.KD.ZG,2015,5.80557386628684

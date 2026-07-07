@@ -1,0 +1,197 @@
+company,tag,value_usd,period_end,form,filed
+JPMorgan Chase,AvailableForSaleSecurities,202225000000,2017-12-31,10-K,2018-02-27
+JPMorgan Chase,AvailableForSaleSecurities,202225000000,2017-12-31,10-K,2019-02-26
+JPMorgan Chase,AvailableForSaleSecurities,238891000000,2016-12-31,10-K,2017-02-28
+JPMorgan Chase,AvailableForSaleSecuritiesDebtSecurities,388178000000,2020-12-31,10-K,2021-02-23
+JPMorgan Chase,AvailableForSaleSecuritiesDebtSecurities,350699000000,2019-12-31,10-K,2020-02-25
+JPMorgan Chase,AvailableForSaleSecuritiesDebtSecurities,350699000000,2019-12-31,10-K,2021-02-23
+JPMorgan Chase,HeldToMaturitySecurities,201899000000,2020-12-31,10-K,2021-02-23
+JPMorgan Chase,HeldToMaturitySecurities,47540000000,2019-12-31,10-K,2020-02-25
+JPMorgan Chase,HeldToMaturitySecurities,31434000000,2018-12-31,10-K,2019-02-26
+JPMorgan Chase,DerivativeAssets,57777000000,2025-12-31,10-K,2026-02-13
+JPMorgan Chase,DerivativeAssets,60967000000,2024-12-31,10-K,2025-02-14
+JPMorgan Chase,DerivativeAssets,60967000000,2024-12-31,10-K,2026-02-13
+JPMorgan Chase,DerivativeLiabilities,46329000000,2025-12-31,10-K,2026-02-13
+JPMorgan Chase,DerivativeLiabilities,39661000000,2024-12-31,10-K,2025-02-14
+JPMorgan Chase,DerivativeLiabilities,39661000000,2024-12-31,10-K,2026-02-13
+JPMorgan Chase,DerivativeNotionalAmount,50642000000000,2025-12-31,10-K,2026-02-13
+JPMorgan Chase,DerivativeNotionalAmount,47723000000000,2024-12-31,10-K,2025-02-14
+JPMorgan Chase,DerivativeNotionalAmount,47723000000000,2024-12-31,10-K,2026-02-13
+Bank of America,AvailableForSaleSecuritiesDebtSecurities,299178000000,2021-12-31,10-K,2022-02-22
+Bank of America,AvailableForSaleSecuritiesDebtSecurities,234491000000,2020-12-31,10-K,2021-02-24
+Bank of America,AvailableForSaleSecuritiesDebtSecurities,234491000000,2020-12-31,10-K,2022-02-22
+Bank of America,HeldToMaturitySecurities,674591000000,2021-12-31,10-K,2022-02-22
+Bank of America,HeldToMaturitySecurities,438279000000,2020-12-31,10-K,2021-02-24
+Bank of America,HeldToMaturitySecurities,438279000000,2020-12-31,10-K,2022-02-22
+Bank of America,TradingSecurities,366954000000,2025-12-31,10-K,2026-02-25
+Bank of America,TradingSecurities,314460000000,2024-12-31,10-K,2025-02-25
+Bank of America,TradingSecurities,314460000000,2024-12-31,10-K,2026-02-25
+Bank of America,DerivativeAssets,40881000000,2025-12-31,10-K,2026-02-25
+Bank of America,DerivativeAssets,40948000000,2024-12-31,10-K,2025-02-25
+Bank of America,DerivativeAssets,40948000000,2024-12-31,10-K,2026-02-25
+Bank of America,DerivativeLiabilities,42076000000,2025-12-31,10-K,2026-02-25
+Bank of America,DerivativeLiabilities,39353000000,2024-12-31,10-K,2025-02-25
+Bank of America,DerivativeLiabilities,39353000000,2024-12-31,10-K,2026-02-25
+Wells Fargo,AvailableForSaleSecurities,277085000000,2017-12-31,10-K,2018-03-01
+Wells Fargo,AvailableForSaleSecurities,308364000000,2016-12-31,10-K,2017-03-01
+Wells Fargo,AvailableForSaleSecurities,308364000000,2016-12-31,10-K,2018-03-01
+Wells Fargo,AvailableForSaleSecuritiesDebtSecurities,177244000000,2021-12-31,10-K,2022-02-22
+Wells Fargo,AvailableForSaleSecuritiesDebtSecurities,220392000000,2020-12-31,10-K,2021-02-23
+Wells Fargo,AvailableForSaleSecuritiesDebtSecurities,220392000000,2020-12-31,10-K,2022-02-22
+Wells Fargo,HeldToMaturitySecurities,272118000000,2021-12-31,10-K,2022-02-22
+Wells Fargo,HeldToMaturitySecurities,205761000000,2020-12-31,10-K,2021-02-23
+Wells Fargo,HeldToMaturitySecurities,205761000000,2020-12-31,10-K,2022-02-22
+Wells Fargo,TradingSecurities,77814000000,2011-12-31,10-K,2012-02-28
+Wells Fargo,TradingSecurities,51414000000,2010-12-31,10-K,2012-02-28
+Wells Fargo,TradingSecurities,51414000000,2010-12-31,10-K,2011-02-25
+Wells Fargo,DerivativeAssets,21810000000,2025-12-31,10-K,2026-02-24
+Wells Fargo,DerivativeAssets,20012000000,2024-12-31,10-K,2025-02-25
+Wells Fargo,DerivativeAssets,20012000000,2024-12-31,10-K,2026-02-24
+Wells Fargo,DerivativeLiabilities,13624000000,2025-12-31,10-K,2026-02-24
+Wells Fargo,DerivativeLiabilities,16335000000,2024-12-31,10-K,2025-02-25
+Wells Fargo,DerivativeLiabilities,16335000000,2024-12-31,10-K,2026-02-24
+Goldman Sachs,AssetsFairValueDisclosure,963966000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,AssetsFairValueDisclosure,907669000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,AssetsFairValueDisclosure,907669000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,LiabilitiesFairValueDisclosure,774885000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,LiabilitiesFairValueDisclosure,699661000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,LiabilitiesFairValueDisclosure,699661000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,AvailableForSaleSecurities,9276000000,2017-12-31,10-K,2018-02-26
+Goldman Sachs,AvailableForSaleSecurities,89000000,2016-12-31,10-K,2018-02-26
+Goldman Sachs,AvailableForSaleSecuritiesDebtSecurities,99244000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,AvailableForSaleSecuritiesDebtSecurities,79458000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,AvailableForSaleSecuritiesDebtSecurities,79458000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,HeldToMaturitySecurities,5301000000,2020-12-31,10-K,2021-02-22
+Goldman Sachs,HeldToMaturitySecurities,5825000000,2019-12-31,10-K,2020-02-21
+Goldman Sachs,HeldToMaturitySecurities,5825000000,2019-12-31,10-K,2021-02-22
+Goldman Sachs,TradingSecurities,656796000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,TradingSecurities,570555000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,TradingSecurities,570555000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeAssets,52953000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeAssets,47339000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,DerivativeAssets,47339000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeLiabilities,84405000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeLiabilities,74980000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,DerivativeLiabilities,74980000000,2024-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeNotionalAmount,43530881000000,2025-12-31,10-K,2026-02-25
+Goldman Sachs,DerivativeNotionalAmount,37127322000000,2024-12-31,10-K,2025-02-27
+Goldman Sachs,DerivativeNotionalAmount,37127322000000,2024-12-31,10-K,2026-02-25
+Morgan Stanley,AvailableForSaleSecurities,61061000000,2018-12-31,10-K,2019-02-26
+Morgan Stanley,AvailableForSaleSecurities,55203000000,2017-12-31,10-K,2018-02-27
+Morgan Stanley,AvailableForSaleSecurities,55203000000,2017-12-31,10-K,2019-02-26
+Morgan Stanley,AvailableForSaleSecuritiesDebtSecurities,102830000000,2021-12-31,10-K,2022-02-24
+Morgan Stanley,AvailableForSaleSecuritiesDebtSecurities,110383000000,2020-12-31,10-K,2021-02-26
+Morgan Stanley,AvailableForSaleSecuritiesDebtSecurities,110383000000,2020-12-31,10-K,2022-02-24
+Morgan Stanley,DerivativeAssets,36790000000,2025-12-31,10-K,2026-02-19
+Morgan Stanley,DerivativeAssets,38569000000,2024-12-31,10-K,2025-02-21
+Morgan Stanley,DerivativeAssets,38569000000,2024-12-31,10-K,2026-02-19
+Morgan Stanley,DerivativeLiabilities,42025000000,2025-12-31,10-K,2026-02-19
+Morgan Stanley,DerivativeLiabilities,37930000000,2024-12-31,10-K,2025-02-21
+Morgan Stanley,DerivativeLiabilities,37930000000,2024-12-31,10-K,2026-02-19
+Citigroup,AvailableForSaleSecurities,290914000000,2017-12-31,10-K,2018-02-23
+Citigroup,AvailableForSaleSecurities,290914000000,2017-12-31,10-K,2019-02-22
+Citigroup,AvailableForSaleSecurities,299424000000,2016-12-31,10-K,2017-02-24
+Citigroup,AvailableForSaleSecuritiesDebtSecurities,249679000000,2022-12-31,10-K,2023-02-27
+Citigroup,AvailableForSaleSecuritiesDebtSecurities,288522000000,2021-12-31,10-K,2022-02-28
+Citigroup,AvailableForSaleSecuritiesDebtSecurities,288522000000,2021-12-31,10-K,2023-02-27
+Citigroup,HeldToMaturitySecurities,268863000000,2022-12-31,10-K,2023-02-27
+Citigroup,HeldToMaturitySecurities,216963000000,2021-12-31,10-K,2022-02-28
+Citigroup,HeldToMaturitySecurities,216963000000,2021-12-31,10-K,2023-02-27
+Citigroup,TradingSecurities,537139000000,2025-12-31,10-K,2026-02-20
+Citigroup,TradingSecurities,442747000000,2024-12-31,10-K,2025-02-21
+Citigroup,TradingSecurities,442747000000,2024-12-31,10-K,2026-02-20
+Citigroup,DerivativeAssets,55434000000,2025-12-31,10-K,2026-02-20
+Citigroup,DerivativeAssets,60599000000,2024-12-31,10-K,2025-02-21
+Citigroup,DerivativeAssets,60599000000,2024-12-31,10-K,2026-02-20
+Citigroup,DerivativeLiabilities,58214000000,2025-12-31,10-K,2026-02-20
+Citigroup,DerivativeLiabilities,48298000000,2024-12-31,10-K,2025-02-21
+Citigroup,DerivativeLiabilities,48298000000,2024-12-31,10-K,2026-02-20
+AIG,AvailableForSaleSecurities,229391000000,2018-12-31,10-K,2019-02-15
+AIG,AvailableForSaleSecurities,240700000000,2017-12-31,10-K,2018-02-16
+AIG,AvailableForSaleSecurities,240700000000,2017-12-31,10-K,2019-02-15
+AIG,AvailableForSaleSecuritiesDebtSecurities,277202000000,2021-12-31,10-K,2022-02-17
+AIG,AvailableForSaleSecuritiesDebtSecurities,271496000000,2020-12-31,10-K,2021-02-19
+AIG,AvailableForSaleSecuritiesDebtSecurities,271496000000,2020-12-31,10-K,2022-02-17
+AIG,TradingSecurities,7017000000,2021-12-31,10-K,2022-02-17
+AIG,TradingSecurities,6347000000,2020-12-31,10-K,2021-02-19
+AIG,TradingSecurities,6347000000,2020-12-31,10-K,2022-02-17
+AIG,DerivativeAssets,5000000,2025-12-31,10-K,2026-02-12
+AIG,DerivativeAssets,50000000,2024-12-31,10-K,2025-02-13
+AIG,DerivativeAssets,50000000,2024-12-31,10-K,2026-02-12
+AIG,DerivativeLiabilities,89000000,2025-12-31,10-K,2026-02-12
+AIG,DerivativeLiabilities,151000000,2024-12-31,10-K,2025-02-13
+AIG,DerivativeLiabilities,151000000,2024-12-31,10-K,2026-02-12
+Prudential Financial,AvailableForSaleSecurities,15469000000,2017-12-31,10-K,2018-02-16
+Prudential Financial,AvailableForSaleSecurities,15562837000,2016-12-31,10-K,2017-02-22
+Prudential Financial,AvailableForSaleSecurities,15563000000,2016-12-31,10-K,2018-02-16
+Prudential Financial,AvailableForSaleSecuritiesDebtSecurities,25305000000,2023-12-31,10-K,2024-02-16
+Prudential Financial,AvailableForSaleSecuritiesDebtSecurities,23423000000,2022-12-31,10-K,2023-02-17
+Prudential Financial,AvailableForSaleSecuritiesDebtSecurities,23423000000,2022-12-31,10-K,2024-02-16
+Prudential Financial,HeldToMaturitySecurities,15750000000,2023-12-31,10-K,2024-02-16
+Prudential Financial,HeldToMaturitySecurities,17052000000,2022-12-31,10-K,2023-02-17
+Prudential Financial,HeldToMaturitySecurities,17052000000,2022-12-31,10-K,2024-02-16
+Prudential Financial,TradingSecurities,105000000,2018-12-31,10-K,2019-02-15
+Prudential Financial,TradingSecurities,86000000,2017-12-31,10-K,2018-02-16
+Prudential Financial,TradingSecurities,86000000,2017-12-31,10-K,2019-02-15
+Prudential Financial,DerivativeAssets,247000000,2025-12-31,10-K,2026-02-13
+Prudential Financial,DerivativeAssets,266000000,2024-12-31,10-K,2025-02-14
+Prudential Financial,DerivativeAssets,266000000,2024-12-31,10-K,2026-02-13
+Prudential Financial,DerivativeLiabilities,350000000,2025-12-31,10-K,2026-02-13
+Prudential Financial,DerivativeLiabilities,578000000,2024-12-31,10-K,2025-02-14
+Prudential Financial,DerivativeLiabilities,578000000,2024-12-31,10-K,2026-02-13
+Prudential Financial,DerivativeNotionalAmount,44024000000,2025-12-31,10-K,2026-02-13
+Prudential Financial,DerivativeNotionalAmount,45809000000,2024-12-31,10-K,2025-02-14
+Prudential Financial,DerivativeNotionalAmount,45809000000,2024-12-31,10-K,2026-02-13
+BlackRock,AssetsFairValueDisclosure,141600000000,2011-12-31,10-K,2012-02-28
+BlackRock,AssetsFairValueDisclosure,140500000000,2010-12-31,10-K,2012-02-28
+BlackRock,LiabilitiesFairValueDisclosure,25443000000,2012-12-31,10-K,2013-03-01
+BlackRock,LiabilitiesFairValueDisclosure,22518000000,2011-12-31,10-K,2013-03-01
+BlackRock,LiabilitiesFairValueDisclosure,22518000000,2011-12-31,10-K,2012-02-28
+BlackRock,AvailableForSaleSecurities,103000000,2017-12-31,10-K,2018-02-28
+BlackRock,AvailableForSaleSecurities,103000000,2017-12-31,10-K,2019-02-28
+BlackRock,AvailableForSaleSecurities,80000000,2016-12-31,10-K,2017-02-28
+BlackRock,AvailableForSaleSecuritiesDebtSecurities,0,2020-12-31,10-K,2021-02-25
+BlackRock,AvailableForSaleSecuritiesDebtSecurities,0,2019-12-31,10-K,2020-02-28
+BlackRock,AvailableForSaleSecuritiesDebtSecurities,0,2019-12-31,10-K,2021-02-25
+BlackRock,HeldToMaturitySecurities,617000000,2023-12-31,10-K,2024-02-23
+BlackRock,HeldToMaturitySecurities,544000000,2022-12-31,10-K,2023-02-24
+BlackRock,HeldToMaturitySecurities,544000000,2022-12-31,10-K,2024-02-23
+BlackRock,TradingSecurities,835000000,2017-12-31,10-K,2018-02-28
+BlackRock,TradingSecurities,835000000,2017-12-31,10-K,2019-02-28
+BlackRock,TradingSecurities,625000000,2016-12-31,10-K,2017-02-28
+BlackRock,DerivativeNotionalAmount,204000000,2023-12-31,10-K,2024-02-23
+State Street,AssetsFairValueDisclosure,424500000,2016-12-31,10-K,2017-02-17
+State Street,AssetsFairValueDisclosure,323600000,2015-12-31,10-K,2017-02-17
+State Street,AssetsFairValueDisclosure,323600000,2015-12-31,10-K,2016-02-17
+Apple,AvailableForSaleSecurities,237100000000,2018-09-29,10-K,2018-11-05
+Apple,AvailableForSaleSecurities,268895000000,2017-09-30,10-K,2017-11-03
+Apple,AvailableForSaleSecurities,268895000000,2017-09-30,10-K,2018-11-05
+Apple,AvailableForSaleSecuritiesDebtSecurities,191830000000,2020-09-26,10-K,2020-10-30
+Apple,AvailableForSaleSecuritiesDebtSecurities,205898000000,2019-09-28,10-K,2019-10-31
+Apple,AvailableForSaleSecuritiesDebtSecurities,205898000000,2019-09-28,10-K,2020-10-30
+Microsoft,AvailableForSaleSecurities,135630000000,2018-06-30,10-K,2018-08-03
+Microsoft,AvailableForSaleSecurities,139004000000,2017-06-30,10-K,2017-08-02
+Microsoft,AvailableForSaleSecurities,139004000000,2017-06-30,10-K,2018-08-03
+Microsoft,AvailableForSaleSecuritiesDebtSecurities,84259000000,2025-06-30,10-K,2025-07-30
+Microsoft,AvailableForSaleSecuritiesDebtSecurities,64899000000,2024-06-30,10-K,2024-07-30
+Microsoft,AvailableForSaleSecuritiesDebtSecurities,95332000000,2023-06-30,10-K,2023-07-27
+Microsoft,HeldToMaturitySecurities,25000000,2015-06-30,10-K,2015-07-31
+Microsoft,HeldToMaturitySecurities,1500000000,2014-06-30,10-K,2014-07-31
+Microsoft,HeldToMaturitySecurities,1500000000,2014-06-30,10-K,2015-07-31
+Microsoft,DerivativeAssets,500000000,2025-06-30,10-K,2025-07-30
+Microsoft,DerivativeAssets,180000000,2024-06-30,10-K,2024-07-30
+Microsoft,DerivativeAssets,180000000,2024-06-30,10-K,2025-07-30
+Microsoft,DerivativeLiabilities,1676000000,2025-06-30,10-K,2025-07-30
+Microsoft,DerivativeLiabilities,752000000,2024-06-30,10-K,2024-07-30
+Microsoft,DerivativeLiabilities,752000000,2024-06-30,10-K,2025-07-30
+Alphabet,AvailableForSaleSecuritiesDebtSecurities,89822000000,2025-12-31,10-K,2026-02-05
+Alphabet,AvailableForSaleSecuritiesDebtSecurities,67378000000,2024-12-31,10-K,2025-02-05
+Alphabet,AvailableForSaleSecuritiesDebtSecurities,82275000000,2023-12-31,10-K,2024-01-31
+Alphabet,DerivativeAssets,732000000,2025-12-31,10-K,2026-02-05
+Alphabet,DerivativeAssets,1728000000,2024-12-31,10-K,2025-02-05
+Alphabet,DerivativeAssets,1728000000,2024-12-31,10-K,2026-02-05
+Alphabet,DerivativeLiabilities,379000000,2025-12-31,10-K,2026-02-05
+Alphabet,DerivativeLiabilities,612000000,2024-12-31,10-K,2025-02-05
+Alphabet,DerivativeLiabilities,612000000,2024-12-31,10-K,2026-02-05
+Amazon,AvailableForSaleSecuritiesDebtSecurities,45800000000,2025-12-31,10-K,2026-02-06
+Amazon,AvailableForSaleSecuritiesDebtSecurities,22286000000,2017-12-31,10-K,2018-02-02

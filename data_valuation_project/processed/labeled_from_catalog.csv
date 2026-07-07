@@ -1,0 +1,457 @@
+asset_class,asset_subclass,has_market_price,has_cash_flows,has_options_features,is_exchange_traded,has_credit_risk,has_early_exercise,is_path_dependent,volatility_available,liquidity,maturity_years,data_availability,ifrs_level,recommended_method
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,Medium,,Full,1,Relative
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Common Stock,1,1,0,1,0,0,0,1,High,,Full,1,DCF
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.06,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.72,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.13,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.45,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.22,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.9,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.49,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.57,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.16,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.61,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.55,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.22,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.94,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.61,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.88,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.63,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.31,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.12,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.47,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.23,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.43,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.89,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.34,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.14,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.37,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.91,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.29,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.65,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.02,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.37,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.32,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.18,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.54,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.5,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.28,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.26,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.18,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.23,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.57,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.42,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.08,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.27,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.26,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.72,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.17,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,1.0,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.28,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.98,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.42,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.05,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.36,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.64,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.69,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.54,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.46,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.56,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.6,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.1,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.38,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.26,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.81,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.48,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.98,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.41,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.82,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.8,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.17,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.52,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.86,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.34,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.24,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.72,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.81,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.36,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.11,Full,1,Forward-Pricing
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.94,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.41,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.53,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.84,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.68,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.74,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.22,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.55,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.7,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.24,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.19,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.98,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.53,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.28,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,1.0,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.97,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.57,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.88,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.2,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.29,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.71,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.85,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.86,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.42,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.89,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.85,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.94,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.79,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.68,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.59,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.38,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.94,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.97,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.3,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.32,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.5,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.46,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.99,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.19,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.04,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.5,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.2,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.38,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.75,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.73,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.32,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.55,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.52,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.64,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.27,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.6,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.98,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.5,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.91,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.45,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.36,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.65,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.68,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.87,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.25,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.51,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.58,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.77,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.06,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.99,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.48,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.29,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.89,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.75,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.95,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.34,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.56,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.58,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.98,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.09,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.32,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.21,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.28,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.5,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.39,Full,1,Forward-Pricing
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.41,Full,1,Forward-Pricing
+Currency,FX Spot,1,0,0,0,0,0,0,1,High,0.85,Full,1,Forward-Pricing
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Fund,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,ETF (Equity),1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,Index,1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
+Equity,ETF (Equity),1,0,0,1,0,0,0,1,High,,Full,1,Mark-to-Market
