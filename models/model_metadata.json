@@ -1,0 +1,98 @@
+{
+  "project": "ValuSense",
+  "version": "2.0",
+  "model": "XGBoost (tuned)",
+  "best_params": {
+    "colsample_bytree": 0.6,
+    "gamma": 0.5,
+    "learning_rate": 0.011233760338073507,
+    "max_depth": 8,
+    "min_child_weight": 7,
+    "n_estimators": 300,
+    "reg_alpha": 0.0368748090579253,
+    "reg_lambda": 2.0416470207182766,
+    "subsample": 0.7
+  },
+  "n_features": 28,
+  "feature_names": [
+    "has_market_price",
+    "has_cash_flows",
+    "has_options_features",
+    "is_exchange_traded",
+    "liquidity",
+    "maturity_years",
+    "has_credit_risk",
+    "has_early_exercise",
+    "is_path_dependent",
+    "data_availability",
+    "volatility_available",
+    "ifrs_level",
+    "risk_free_rate_3m",
+    "yield_10y",
+    "yield_curve_slope",
+    "implied_volatility_atm",
+    "iv_skew",
+    "beta",
+    "pe_ratio",
+    "dividend_yield",
+    "market_cap",
+    "debt_to_equity",
+    "duration_estimate",
+    "credit_spread_asset",
+    "convenience_yield",
+    "storage_cost_pct",
+    "asset_class_encoded",
+    "asset_subclass_encoded"
+  ],
+  "target_classes": [
+    "Binomial-Tree",
+    "Black-Scholes",
+    "Cost-of-Carry",
+    "Credit-Model",
+    "DCF",
+    "DDM",
+    "Forward-Pricing",
+    "Mark-to-Market",
+    "Monte-Carlo",
+    "Relative"
+  ],
+  "n_classes": 10,
+  "training_samples": 12207,
+  "validation_samples": 3052,
+  "metrics": {
+    "before_ifrs": {
+      "accuracy": 0.9905,
+      "balanced_accuracy": 0.9906,
+      "f1_weighted": 0.9906,
+      "f1_macro": 0.9877,
+      "cohen_kappa": 0.9889,
+      "min_class_f1": 0.952,
+      "worst_class": "Mark-to-Market"
+    },
+    "after_ifrs": {
+      "accuracy": 0.791,
+      "f1_weighted": 0.845,
+      "f1_macro": 0.7927,
+      "kappa": 0.762
+    }
+  },
+  "ifrs_overrides": 609,
+  "domain_violations_after_ifrs": 0,
+  "shap_enabled": true,
+  "agent_system_prompt": "\nTu es ValuSense, un assistant IA expert en valorisation d'actifs financiers.\nTu combines un mod\u00e8le ML (XGBoost) entra\u00een\u00e9 sur 15259 actifs financiers\navec les contraintes r\u00e9glementaires IFRS 13.\n\nQuand un utilisateur d\u00e9crit un actif financier, tu :\n1. Extrais les caract\u00e9ristiques pertinentes (classe, liquidit\u00e9, maturit\u00e9, etc.)\n2. Appelles le moteur ML via predict_and_explain()\n3. Interpr\u00e8tes le r\u00e9sultat en langage naturel\n\nFormat de r\u00e9ponse :\n- **M\u00e9thode recommand\u00e9e** : [nom] (confiance : [X]%)\n- **Justification** : Les facteurs d\u00e9terminants sont [top-3 SHAP features]\n- **Alternatives** : [2\u00e8me et 3\u00e8me m\u00e9thodes avec probabilit\u00e9s]\n- **Conformit\u00e9 IFRS 13** : [Niveau X \u2014 contrainte appliqu\u00e9e ou non]\n- **Avertissements** : [si confiance < 70% ou override IFRS]\n\nM\u00e9thodes de valorisation disponibles :\n  - Binomial-Tree\n  - Black-Scholes\n  - Cost-of-Carry\n  - Credit-Model\n  - DCF\n  - DDM\n  - Forward-Pricing\n  - Mark-to-Market\n  - Monte-Carlo\n  - Relative\n\nR\u00e9f\u00e9rences :\n- Hull, \"Options, Futures and Other Derivatives\", 9th Ed.\n- IFRS 13 Fair Value Measurement (IASB)\n",
+  "data_sources": [
+    "FinanceDatabase (353K instruments)",
+    "yfinance (equities, options, commodities, forex)",
+    "FRED (yields, rates, spreads, macro)",
+    "Expert rules (Hull + IFRS 13)",
+    "Targeted synthetic generation (DDM, MtM, Relative)"
+  ],
+  "ifrs_rules": [
+    "R1: Level 1 + market_price + liquid \u2192 Mark-to-Market (\u00a772-75)",
+    "R2: Level 3 + no market_price \u2192 never Mark-to-Market (\u00a786-90)",
+    "R3: early_exercise + BSM \u2192 Binomial-Tree (Hull Ch.13)",
+    "R4: path_dependent \u2192 Monte-Carlo (Hull Ch.18)",
+    "R5: non-option + cash_flows + options_method \u2192 DCF",
+    "R6: non-dividend + DDM \u2192 Cost-of-Carry"
+  ]
+}
