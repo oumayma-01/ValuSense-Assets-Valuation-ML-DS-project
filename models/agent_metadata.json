@@ -1,0 +1,130 @@
+{
+  "project": "ValuSense",
+  "version": "3.0 \u2014 Agent IA",
+  "components": {
+    "ml_model": "XGBoost (tuned)",
+    "explainability": "SHAP TreeExplainer",
+    "compliance": "IFRS 13 v2 (6 rules)",
+    "valuation_engines": [
+      "Black-Scholes",
+      "DCF",
+      "DDM",
+      "Monte-Carlo",
+      "Binomial-Tree",
+      "Cost-of-Carry",
+      "Forward-Pricing",
+      "Mark-to-Market",
+      "Relative",
+      "Credit-Model"
+    ],
+    "llm_integration": "Claude API (function calling)"
+  },
+  "tool_definition": {
+    "name": "valuate_asset",
+    "description": "Recommande la methode de valorisation optimale pour un actif financier, applique les contraintes IFRS 13, et calcule la juste valeur.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "asset_features": {
+          "type": "object",
+          "description": "Caracteristiques de l'actif (has_options_features, has_cash_flows, is_path_dependent, has_early_exercise, ifrs_level, liquidity, etc.)"
+        },
+        "valuation_params": {
+          "type": "object",
+          "description": "Parametres pour le calcul (S, K, T, r, sigma pour BSM ; cash_flows, discount_rate pour DCF ; etc.)"
+        }
+      },
+      "required": [
+        "asset_features"
+      ]
+    }
+  },
+  "system_prompt": "Tu es ValuSense, un assistant expert en valorisation d'actifs financiers\ndeveloppe par VERMEG. Tu combines un modele ML (XGBoost) avec les contraintes IFRS 13\net des moteurs de calcul quantitatif (Black-Scholes, DCF, Monte-Carlo, etc.).\n\nCAPACITES :\n1. Recommander la methode de valorisation optimale pour un actif financier\n2. Calculer la juste valeur avec la methode recommandee\n3. Expliquer la decision avec les facteurs SHAP et les references IFRS 13\n4. Fournir les Greeks pour les options et les sensibilites pour les obligations\n\nWORKFLOW :\n- L'utilisateur decrit un actif en langage naturel\n- Tu extrais les caracteristiques financieres\n- Tu appelles valuate_asset() avec les features et parametres\n- Tu presentes le resultat de maniere claire et structuree\n\nMETHODES DISPONIBLES (10) :\n- Black-Scholes : options europeennes (Hull Ch. 15)\n- Binomial-Tree : options americaines avec exercice anticipe (Hull Ch. 13)\n- Monte-Carlo : options exotiques path-dependent (Hull Ch. 18)\n- DCF : obligations, swaps, projets a flux de tresorerie (Hull Ch. 4, 6)\n- DDM : actions a dividendes stables (Gordon Growth Model)\n- Cost-of-Carry : matieres premieres (Hull Ch. 10)\n- Forward-Pricing : devises et contrats forward (Hull Ch. 8)\n- Mark-to-Market : actifs liquides IFRS Level 1\n- Relative : actions de croissance valorisees par multiples\n- Credit-Model : obligations corporate avec risque de defaut (Hull Ch. 21)\n\nREFERENCES :\n- Hull, \"Options, Futures and Other Derivatives\", 9th Ed.\n- IFRS 13 Fair Value Measurement (IASB)\n- Blanquet, Pereira & Petrov (2025), Decision Analytics Journal\n",
+  "valuation_capabilities": {
+    "Black-Scholes": {
+      "inputs": [
+        "S",
+        "K",
+        "T",
+        "r",
+        "sigma"
+      ],
+      "outputs": [
+        "price",
+        "greeks"
+      ]
+    },
+    "DCF": {
+      "inputs": [
+        "cash_flows",
+        "discount_rate",
+        "terminal_growth"
+      ],
+      "outputs": [
+        "fair_value",
+        "pv_details"
+      ]
+    },
+    "DDM": {
+      "inputs": [
+        "dividend_current",
+        "growth_rate",
+        "required_return"
+      ],
+      "outputs": [
+        "fair_value"
+      ]
+    },
+    "Monte-Carlo": {
+      "inputs": [
+        "S",
+        "K",
+        "T",
+        "r",
+        "sigma",
+        "exotic_type"
+      ],
+      "outputs": [
+        "price",
+        "confidence_interval"
+      ]
+    },
+    "Binomial-Tree": {
+      "inputs": [
+        "S",
+        "K",
+        "T",
+        "r",
+        "sigma",
+        "american"
+      ],
+      "outputs": [
+        "price",
+        "early_exercise"
+      ]
+    },
+    "Cost-of-Carry": {
+      "inputs": [
+        "S",
+        "r",
+        "T",
+        "storage_cost",
+        "convenience_yield"
+      ],
+      "outputs": [
+        "forward_price"
+      ]
+    },
+    "Forward-Pricing": {
+      "inputs": [
+        "S",
+        "r_domestic",
+        "r_foreign",
+        "T"
+      ],
+      "outputs": [
+        "forward_rate"
+      ]
+    }
+  }
+}
