@@ -1,0 +1,494 @@
+{
+  "Bond": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_cash_flows": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_options_features": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": 9.370000000000001,
+      "p25": 5.282500000000001,
+      "p75": 16.3175
+    },
+    "has_credit_risk": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_early_exercise": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "data_availability": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.830006508749131,
+      "p25": 3.817446897101588,
+      "p75": 3.8420302575477137
+    },
+    "yield_10y": {
+      "median": 4.46053571376281,
+      "p25": 4.445411806626599,
+      "p75": 4.475657092572329
+    },
+    "yield_curve_slope": {
+      "median": 0.269190307219162,
+      "p25": 0.2557394884096923,
+      "p75": 0.28223220613087713
+    },
+    "duration_estimate": {
+      "median": 7.86376656995264,
+      "p25": 4.504528869898425,
+      "p75": 13.678786205083519
+    },
+    "credit_spread_asset": {
+      "median": 2.246614966098152,
+      "p25": 0.4272925902014382,
+      "p75": 3.6527722036819186
+    },
+    "asset_subclass_encoded": {
+      "median": 36.0,
+      "p25": 18.0,
+      "p75": 50.0
+    }
+  },
+  "Commodity": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": 0.93,
+      "p25": 0.42,
+      "p75": 1.46
+    },
+    "data_availability": {
+      "median": 2.0,
+      "p25": 2.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.8319984162035694,
+      "p25": 3.820422076154738,
+      "p75": 3.843433625073858
+    },
+    "yield_10y": {
+      "median": 4.463853713838899,
+      "p25": 4.448884250959339,
+      "p75": 4.478041910646657
+    },
+    "yield_curve_slope": {
+      "median": 0.272207292627195,
+      "p25": 0.25609680022559567,
+      "p75": 0.28535302609712976
+    },
+    "convenience_yield": {
+      "median": 0.04282284430839691,
+      "p25": 0.02735635308749506,
+      "p75": 0.06279058861343328
+    },
+    "storage_cost_pct": {
+      "median": 0.017695274321090193,
+      "p25": 0.011026275541769158,
+      "p75": 0.024322842773052987
+    },
+    "asset_class_encoded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "asset_subclass_encoded": {
+      "median": 25.0,
+      "p25": 14.0,
+      "p75": 44.0
+    }
+  },
+  "Currency": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_cash_flows": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": 0.485,
+      "p25": 0.1975,
+      "p75": 0.87
+    },
+    "has_credit_risk": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "data_availability": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.8303134262019327,
+      "p25": 3.819379746610234,
+      "p75": 3.843179385564742
+    },
+    "yield_10y": {
+      "median": 4.461407326538167,
+      "p25": 4.44483295172837,
+      "p75": 4.476276176084248
+    },
+    "yield_curve_slope": {
+      "median": 0.27057865204045356,
+      "p25": 0.25498270062676087,
+      "p75": 0.2838154601722645
+    },
+    "asset_class_encoded": {
+      "median": 2.0,
+      "p25": 2.0,
+      "p75": 2.0
+    },
+    "asset_subclass_encoded": {
+      "median": 32.0,
+      "p25": 23.0,
+      "p75": 51.0
+    }
+  },
+  "Derivative": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_cash_flows": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_options_features": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": 3.21,
+      "p25": 1.3225,
+      "p75": 13.215
+    },
+    "has_credit_risk": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "data_availability": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 2.0,
+      "p25": 2.0,
+      "p75": 2.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.8289130137226604,
+      "p25": 3.816648684295737,
+      "p75": 3.841031108631551
+    },
+    "yield_10y": {
+      "median": 4.4605784496148475,
+      "p25": 4.444023698084058,
+      "p75": 4.474570177762155
+    },
+    "yield_curve_slope": {
+      "median": 0.2709892979579155,
+      "p25": 0.25808840957276585,
+      "p75": 0.28603123885496257
+    },
+    "asset_class_encoded": {
+      "median": 3.0,
+      "p25": 3.0,
+      "p75": 3.0
+    },
+    "asset_subclass_encoded": {
+      "median": 33.0,
+      "p25": 28.0,
+      "p75": 45.0
+    }
+  },
+  "Equity": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_cash_flows": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": -1.0,
+      "p25": -1.0,
+      "p75": -1.0
+    },
+    "data_availability": {
+      "median": 2.0,
+      "p25": 2.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.8293542765130546,
+      "p25": 3.816843281808663,
+      "p75": 3.843426496317037
+    },
+    "yield_10y": {
+      "median": 4.459253564318647,
+      "p25": 4.443361786274291,
+      "p75": 4.4716887965586025
+    },
+    "yield_curve_slope": {
+      "median": 0.27072606795581217,
+      "p25": 0.25652692430969776,
+      "p75": 0.28329877531378983
+    },
+    "beta": {
+      "median": 0.9431952913431908,
+      "p25": 0.446492402896405,
+      "p75": 1.3173117027452257
+    },
+    "pe_ratio": {
+      "median": 24.76662644601869,
+      "p25": 19.503145483788202,
+      "p75": 35.171129853517286
+    },
+    "dividend_yield": {
+      "median": 2.316496239755149,
+      "p25": 0.9649595141393821,
+      "p75": 3.0481263573957826
+    },
+    "market_cap": {
+      "median": 250846174445.6596,
+      "p25": 106289656633.53326,
+      "p75": 575713265948.8292
+    },
+    "debt_to_equity": {
+      "median": 70.70963736286713,
+      "p25": 27.357389410416378,
+      "p75": 155.82032678438478
+    },
+    "asset_class_encoded": {
+      "median": 4.0,
+      "p25": 4.0,
+      "p75": 4.0
+    },
+    "asset_subclass_encoded": {
+      "median": 40.0,
+      "p25": 16.0,
+      "p75": 48.0
+    }
+  },
+  "Option": {
+    "has_market_price": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_options_features": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_exchange_traded": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "liquidity": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "maturity_years": {
+      "median": 1.15,
+      "p25": 0.63,
+      "p75": 1.74
+    },
+    "has_credit_risk": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "has_early_exercise": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "is_path_dependent": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "data_availability": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 2.0
+    },
+    "volatility_available": {
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "ifrs_level": {
+      "median": 2.0,
+      "p25": 1.0,
+      "p75": 3.0
+    },
+    "risk_free_rate_3m": {
+      "median": 3.8291504781269534,
+      "p25": 3.816414204803513,
+      "p75": 3.8422541416294624
+    },
+    "yield_10y": {
+      "median": 4.461227298764381,
+      "p25": 4.444413517396362,
+      "p75": 4.4754044458805184
+    },
+    "yield_curve_slope": {
+      "median": 0.27002354709031445,
+      "p25": 0.257717480635468,
+      "p75": 0.28402259596324736
+    },
+    "implied_volatility_atm": {
+      "median": 0.062509375,
+      "p25": 1.0000000000000003e-05,
+      "p75": 0.2500075
+    },
+    "iv_skew": {
+      "median": 0.059201815155683735,
+      "p25": 0.051625249525063595,
+      "p75": 0.06512891402995422
+    },
+    "asset_class_encoded": {
+      "median": 5.0,
+      "p25": 5.0,
+      "p75": 5.0
+    },
+    "asset_subclass_encoded": {
+      "median": 29.0,
+      "p25": 4.0,
+      "p75": 31.0
+    }
+  }
+}
