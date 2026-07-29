@@ -1,0 +1,7 @@
+[theme]
+base = "light"
+primaryColor = "#1565C0"
+font = "sans serif"
+
+[server]
+maxUploadSize = 10
