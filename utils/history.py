@@ -9,6 +9,7 @@ def init_history():
 
 
 def add_to_history(asset_name, result):
+    init_history()
     entry = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "asset_name": asset_name,
@@ -33,10 +34,12 @@ def _extract_price(val):
 
 
 def get_history_df():
+    init_history()
     if not st.session_state.valuation_history:
         return pd.DataFrame()
     return pd.DataFrame(st.session_state.valuation_history)
 
 
 def clear_history():
+    init_history()
     st.session_state.valuation_history = []

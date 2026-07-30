@@ -1,0 +1,71 @@
+{
+  "project": "ValuSense",
+  "version": "3.0",
+  "calibration": {
+    "temperature_T": 0.5555501029023532,
+    "calibration_method": "Temperature Scaling",
+    "temperature": 0.5555501029023532,
+    "calibrated_model_path": null
+  },
+  "hierarchical": {
+    "enabled": true,
+    "stage1": "RandomForest (300 trees)",
+    "stage2": "Per-class XGBoost",
+    "valid_methods_per_class": {
+      "Bond": [
+        "Credit-Model",
+        "DCF",
+        "Mark-to-Market"
+      ],
+      "Commodity": [
+        "Cost-of-Carry"
+      ],
+      "Currency": [
+        "Forward-Pricing"
+      ],
+      "Derivative": [
+        "Black-Scholes",
+        "Cost-of-Carry",
+        "DCF",
+        "Forward-Pricing"
+      ],
+      "Equity": [
+        "DCF",
+        "DDM",
+        "Mark-to-Market",
+        "Relative"
+      ],
+      "Option": [
+        "Binomial-Tree",
+        "Black-Scholes",
+        "Monte-Carlo"
+      ]
+    }
+  },
+  "comparison": {
+    "flat": {
+      "model": "XGBoost + TS",
+      "weighted_f1": 0.9905617075227868,
+      "macro_f1": 0.9877001798159482,
+      "ece": 0.004898783185319062,
+      "mean_confidence": 0.9950000689325297,
+      "p10_confidence": 0.9925354218037075
+    },
+    "hierarchical": {
+      "model": "Stage1 RF + Stage2 XGBoost per class",
+      "weighted_f1": 0.983938905053984,
+      "macro_f1": 0.9831601001497168,
+      "ece": 0.01844857596983908,
+      "mean_confidence": 0.9808912185334441,
+      "p10_confidence": 0.943073844909668
+    },
+    "manual_inputs_test": {
+      "n_samples": 20,
+      "flat_mean_confidence": 0.6874785064383077,
+      "hierarchical_mean_confidence": 0.9348473995923996,
+      "flat_pct_below_60": 0.3,
+      "hierarchical_pct_below_60": 0.05
+    }
+  },
+  "winner": "flat"
+}

@@ -1,9 +1,14 @@
 import numpy as np
 import pandas as pd
+from scipy.special import softmax
+import xgboost as xgb
 
 from .config import (
     best_model, le_target, FEATURE_NAMES, get_shap_values,
-    AC_LOOKUP, SC_LOOKUP, AC_REVERSE, CALIBRATED_DEFAULTS
+    AC_LOOKUP, SC_LOOKUP, AC_REVERSE, CALIBRATED_DEFAULTS,
+    CALIB_TEMPERATURE, CALIBRATION_ENABLED, CALIB_METHOD,
+    STAGE1_CLASSIFIER, STAGE2_MODELS, STAGE2_ENCODERS,
+    NEAREST_NEIGHBOR, FEATURE_COLS_STAGE1
 )
 from .engines import VALUATION_ENGINES, ENGINE_SIGNATURES
 from .ifrs import apply_ifrs_constraints_v3
@@ -123,3 +128,157 @@ def valuate_asset(asset_features, valuation_params=None):
         "explanation": {"top_drivers": drivers, "natural_language": " ".join(parts)},
         "valuation": val_result,
     }
+
+
+def _predict_proba_calibrated(model, X, T):
+    dX = xgb.DMatrix(X, feature_names=list(FEATURE_NAMES))
+    logits = model.get_booster().predict(dX, output_margin=True)
+    return softmax(logits / T, axis=1)[0]
+
+
+def _predict_hierarchical(X):
+    X_s1 = X[FEATURE_COLS_STAGE1]
+    ac_pred = STAGE1_CLASSIFIER.predict(X_s1)[0]
+    if STAGE2_MODELS.get(ac_pred) is not None and STAGE2_ENCODERS.get(ac_pred) is not None:
+        pred_local = STAGE2_MODELS[ac_pred].predict(X)[0]
+        proba_local = STAGE2_MODELS[ac_pred].predict_proba(X)[0]
+        reverse_le = {v: k for k, v in STAGE2_ENCODERS[ac_pred].items()}
+        method_local = reverse_le[pred_local]
+        pred = le_target.transform([method_local])[0]
+        proba = np.zeros(len(le_target.classes_))
+        for local_idx, p in enumerate(proba_local):
+            m = reverse_le[local_idx]
+            proba[le_target.transform([m])[0]] = p
+        return pred, proba, method_local
+    pred = best_model.predict(X)[0]
+    proba = best_model.predict_proba(X)[0]
+    return pred, proba, le_target.inverse_transform([pred])[0]
+
+
+def valuate_asset_v2(asset_features, valuation_params=None):
+    defaults = _build_feature_defaults(asset_features)
+    for feat in FEATURE_NAMES:
+        if feat not in asset_features or asset_features[feat] is None:
+            asset_features[feat] = defaults.get(feat, 0)
+    X = pd.DataFrame([asset_features])
+    for col in FEATURE_NAMES:
+        if col not in X.columns:
+            X[col] = 0
+    X = X[FEATURE_NAMES].fillna(0)
+
+    use_hier = CALIBRATION_ENABLED and STAGE1_CLASSIFIER is not None and STAGE2_MODELS is not None
+
+    if use_hier:
+        pred, proba, ml_method = _predict_hierarchical(X)
+        confidence = float(proba[pred])
+    elif CALIBRATION_ENABLED and CALIB_TEMPERATURE != 1.0:
+        proba = _predict_proba_calibrated(best_model, X, CALIB_TEMPERATURE)
+        pred = int(proba.argmax())
+        ml_method = le_target.inverse_transform([pred])[0]
+        confidence = float(proba[pred])
+    else:
+        pred = best_model.predict(X)[0]
+        proba = best_model.predict_proba(X)[0]
+        ml_method = le_target.inverse_transform([pred])[0]
+        confidence = float(proba[pred])
+
+    top3_idx = np.argsort(proba)[-3:][::-1]
+    alternatives = [{"method": le_target.inverse_transform([i])[0],
+                     "probability": round(float(proba[i]), 4)} for i in top3_idx]
+
+    y_arr = np.array([pred])
+    y_ifrs, _, details = apply_ifrs_constraints_v3(y_arr, X, le_target)
+    final_method = le_target.inverse_transform([y_ifrs[0]])[0]
+    ifrs_override = final_method != ml_method
+
+    drivers = []
+    try:
+        sv = get_shap_values(X)
+        if sv is not None:
+            sv_class = sv[pred][0] if isinstance(sv, list) else sv[0, :, pred]
+            importance = pd.Series(np.abs(sv_class), index=FEATURE_NAMES).sort_values(ascending=False)
+            for feat, imp in importance.head(5).items():
+                drivers.append({"feature": feat, "value": round(float(X[feat].iloc[0]), 4),
+                                "shap_impact": round(float(sv_class[FEATURE_NAMES.index(feat)]), 4)})
+    except Exception:
+        pass
+
+    val_result = None
+    if valuation_params is not None:
+        pk = set(valuation_params.keys())
+        sig = ENGINE_SIGNATURES.get(final_method, {}).get("required", set())
+        if sig.issubset(pk):
+            try:
+                val_result = VALUATION_ENGINES[final_method](**valuation_params)
+            except Exception as e:
+                val_result = {"method": final_method, "error": str(e)}
+        else:
+            for cand, spec in ENGINE_SIGNATURES.items():
+                if spec["required"] and spec["required"].issubset(pk):
+                    try:
+                        val_result = VALUATION_ENGINES[cand](**valuation_params)
+                        val_result["note_dispatch"] = f"Calculated via {cand} (compatible params)"
+                        break
+                    except Exception:
+                        continue
+            if val_result is None:
+                label = ENGINE_SIGNATURES.get(final_method, {}).get("label", "?")
+                val_result = {"method": final_method,
+                              "error": f"Insufficient params. Required: {label}. Got: {pk}"}
+
+    parts = [f"{final_method} is recommended with {confidence:.0%} confidence."]
+    if confidence < 0.5:
+        parts.append("Warning: low confidence, manual verification recommended.")
+    if drivers:
+        parts.append(f"Top factors: {', '.join([d['feature'].replace('_', ' ') for d in drivers[:3]])}.")
+    if ifrs_override:
+        parts.append(f"IFRS 13 note: ML prediction ({ml_method}) corrected to {final_method}.")
+
+    result = {
+        "recommendation": {"method": final_method, "confidence": round(confidence, 4),
+                           "ml_prediction": ml_method, "ifrs_override": ifrs_override,
+                           "ifrs_rule": details[0]["rule"] if details else None,
+                           "is_low_confidence": confidence < 0.6},
+        "alternatives": alternatives,
+        "explanation": {"top_drivers": drivers, "natural_language": " ".join(parts)},
+        "valuation": val_result,
+    }
+
+    if confidence < 0.6 and NEAREST_NEIGHBOR is not None:
+        try:
+            feat_row = X[FEATURE_COLS_STAGE1].values[:1]
+            dist, nn_idx = NEAREST_NEIGHBOR.kneighbors(feat_row)
+            nn_label = le_target.inverse_transform([int(y_arr[0])])[0]
+            result["nearest_neighbor"] = {
+                "train_index": int(nn_idx[0][0]),
+                "label": nn_label,
+                "distance": round(float(dist[0][0]), 4),
+            }
+        except Exception:
+            pass
+
+    return result
+
+
+def validate_domain_consistency(features):
+    asset_class = features.get("asset_class", "Unknown")
+    warnings = []
+
+    if asset_class in ("Option", "Derivative") and features.get("has_cash_flows") == 1:
+        warnings.append("Derivative assets typically do **not** have cash flows.")
+    if isinstance(asset_class, str) and "Bond" in asset_class and features.get("has_cash_flows") == 0:
+        warnings.append("Bond assets typically **have** cash flows (coupons).")
+    if features.get("has_market_price") == 0 and features.get("ifrs_level") == 1:
+        warnings.append("IFRS 13 Level 1 requires an observable market price.")
+    if features.get("has_options_features") == 1 and asset_class not in ("Option", "Derivative", "Equity"):
+        warnings.append("Options features are unusual for this asset class.")
+    if features.get("has_credit_risk") == 1 and asset_class == "Option":
+        warnings.append("Options generally do not carry credit risk.")
+    if features.get("is_path_dependent") == 1 and asset_class not in ("Option", "Derivative"):
+        warnings.append("Path dependency is typical only for exotic options.")
+    if features.get("liquidity", 0) >= 2 and features.get("ifrs_level") == 3:
+        warnings.append("High liquidity inconsistent with IFRS 13 Level 3.")
+    if features.get("maturity_years", -1) > 50:
+        warnings.append("Maturity >50 years is unusual.")
+
+    return warnings

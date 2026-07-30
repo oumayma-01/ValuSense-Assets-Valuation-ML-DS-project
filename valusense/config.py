@@ -54,3 +54,44 @@ with open(MODELS_DIR / "encoder_lookups.json") as f:
 
 SC_LOOKUP_FULL = lookups["sc_lookup"]
 AC_LOOKUP_FULL = lookups["ac_lookup"]
+
+# ---- Calibration & Hierarchical artifacts (optional, v3+) ----
+CALIBRATION_META = None
+CALIB_TEMPERATURE = 1.0
+CALIB_METHOD = None
+STAGE1_CLASSIFIER = None
+STAGE2_MODELS = None
+STAGE2_ENCODERS = None
+NEAREST_NEIGHBOR = None
+FEATURE_COLS_STAGE1 = [c for c in FEATURE_NAMES if c not in ("asset_class_encoded", "asset_subclass_encoded")]
+
+def load_calibration_artifacts():
+    global CALIBRATION_META, CALIB_TEMPERATURE, CALIB_METHOD
+    global STAGE1_CLASSIFIER, STAGE2_MODELS, STAGE2_ENCODERS, NEAREST_NEIGHBOR
+    try:
+        meta_path = MODELS_DIR / "metadata_calibrated_v3_calibrated.json"
+        if not meta_path.exists():
+            return False
+        with open(meta_path) as f:
+            CALIBRATION_META = json.load(f)
+        CALIB_TEMPERATURE = CALIBRATION_META.get("calibration", {}).get("temperature", 1.0)
+        CALIB_METHOD = CALIBRATION_META.get("calibration", {}).get("calibration_method", None)
+
+        if CALIBRATION_META.get("winner") == "hierarchical":
+            s1 = MODELS_DIR / "stage1_asset_classifier_v3_calibrated.pkl"
+            s2 = MODELS_DIR / "stage2_method_classifiers_v3_calibrated.pkl"
+            s2e = MODELS_DIR / "stage2_label_encoders_v3_calibrated.pkl"
+            if s1.exists() and s2.exists() and s2e.exists():
+                STAGE1_CLASSIFIER = joblib.load(s1)
+                STAGE2_MODELS = joblib.load(s2)
+                STAGE2_ENCODERS = joblib.load(s2e)
+
+        nn_path = MODELS_DIR / "nearest_neighbor_v3_calibrated.pkl"
+        if nn_path.exists():
+            NEAREST_NEIGHBOR = joblib.load(nn_path)
+
+        return True
+    except Exception:
+        return False
+
+CALIBRATION_ENABLED = load_calibration_artifacts()

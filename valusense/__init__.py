@@ -1,4 +1,4 @@
-from .core import valuate_asset, encode_asset
+from .core import valuate_asset, valuate_asset_v2, encode_asset
 from .engines import VALUATION_ENGINES, ENGINE_SIGNATURES
 from .config import (
     FEATURE_NAMES, TARGET_CLASSES, AC_LOOKUP, SC_LOOKUP, AC_REVERSE,

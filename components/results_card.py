@@ -1,6 +1,15 @@
 import streamlit as st
 
 
+def render_calibrated_badge(confidence):
+    if confidence >= 0.8:
+        return "green", "High Confidence"
+    elif confidence >= 0.6:
+        return "orange", "Medium Confidence"
+    else:
+        return "red", "Low Confidence"
+
+
 def render_recommendation(result):
     rec = result["recommendation"]
     method = rec["method"]
@@ -8,20 +17,32 @@ def render_recommendation(result):
     ml_pred = rec["ml_prediction"]
     ifrs_override = rec["ifrs_override"]
     ifrs_rule = rec.get("ifrs_rule")
+    is_low = rec.get("is_low_confidence", False)
 
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.markdown("### Recommendation")
-        st.markdown(f"## {method}")
+        color, label = render_calibrated_badge(confidence)
+        st.markdown(
+            f"<div style='background:{color};color:white;"
+            f"padding:0.5rem 1rem;border-radius:0.5rem;"
+            f"text-align:center;font-size:1.5rem;font-weight:bold'>"
+            f"{method} — {confidence:.1%}<br><span style='font-size:0.9rem'>{label}</span></div>",
+            unsafe_allow_html=True,
+        )
+        if is_low:
+            st.markdown(
+                f"<div style='background:orange;color:black;padding:0.25rem 0.75rem;"
+                f"border-radius:0.5rem;display:inline-block;font-weight:bold;'>"
+                f"⚠ Uncertain — see alternatives</div>",
+                unsafe_allow_html=True,
+            )
+        nn = result.get("nearest_neighbor")
+        if nn:
+            st.caption(f"Closest known: *{nn['label']}* (distance={nn['distance']:.4f})")
 
-        color = "green" if confidence >= 0.8 else ("orange" if confidence >= 0.6 else "red")
-        st.markdown(f"**Confidence:** <span style='color:{color};font-size:1.3em'>{confidence:.1%}</span>",
-                    unsafe_allow_html=True)
-
-        st.markdown("---")
         st.markdown(f"**ML Prediction:** {ml_pred}")
         if ifrs_override:
-            st.warning(f"IFRS 13 override applied: {ifrs_rule}")
+            st.error(f"Regulatory Override Applied: {ifrs_rule}")
         else:
             st.success("No IFRS 13 override needed")
 
@@ -29,7 +50,6 @@ def render_recommendation(result):
         st.markdown("### Alternatives")
         for alt in result.get("alternatives", []):
             prob = alt["probability"]
-            bar_width = int(prob * 100)
             st.markdown(f"**{alt['method']}**")
             st.progress(prob, text=f"{prob:.1%}")
 
@@ -39,11 +59,11 @@ def render_recommendation(result):
 
     drivers = result.get("explanation", {}).get("top_drivers", [])
     if drivers:
-        st.markdown("### Top Drivers (SHAP)")
-        for d in drivers:
-            impact = d["shap_impact"]
-            direction = "▲" if impact > 0 else "▼"
-            st.markdown(f"- {d['feature']}: `{d['value']}` → SHAP impact **{impact:.4f}** {direction}")
+        with st.expander("SHAP Waterfall — Top Drivers", expanded=False):
+            for d in drivers:
+                impact = d["shap_impact"]
+                direction = "▲" if impact > 0 else "▼"
+                st.markdown(f"- {d['feature']}: `{d['value']}` → SHAP impact **{impact:.4f}** {direction}")
 
 
 def render_valuation(val_result):
@@ -68,7 +88,6 @@ def render_valuation(val_result):
             st.metric(label, f"${val_result[key]:,.4f}")
 
     if "greeks" in val_result:
-        st.markdown("#### Greeks")
         g = val_result["greeks"]
         cols = st.columns(5)
         for i, (k, v) in enumerate(g.items()):
