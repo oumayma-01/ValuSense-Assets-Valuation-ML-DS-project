@@ -514,6 +514,7 @@ def retrieve_knowledge(
     query: str,
     k: int = 4,
     source_filter: Optional[List[str]] = None,
+    languages: Optional[List[str]] = None,
 ) -> List[dict]:
     """Search the vector store and return top-k results.
 
@@ -521,7 +522,7 @@ def retrieve_knowledge(
         query: Natural language query.
         k: Number of results.
         source_filter: Optional list of source names to restrict search to.
-                       e.g. ["Cadre", "Méthodes_de_Valorisation", "Financial_Asset_Valuation_Framework"]
+        languages: Optional list of languages to restrict search to (e.g. ["en"]).
 
     Returns:
         List of {text, source, section_or_chapter, page, language, score}
@@ -530,9 +531,16 @@ def retrieve_knowledge(
     model = _get_embedding_model()
     q_emb = model.encode([query])[0].tolist()
 
-    where_filter = None
+    clauses = []
     if source_filter:
-        where_filter = {"source": {"$in": source_filter}}
+        clauses.append({"source": {"$in": source_filter}})
+    if languages:
+        clauses.append({"language": {"$in": languages}})
+    where_filter = None
+    if len(clauses) == 1:
+        where_filter = clauses[0]
+    elif len(clauses) > 1:
+        where_filter = {"$and": clauses}
 
     results = collection.query(
         query_embeddings=[q_emb],
@@ -558,7 +566,7 @@ def retrieve_knowledge(
         if src == "Hull" and meta.get("chapter"):
             parts.append(f"Hull, Chapter {meta['chapter']}")
             if meta.get("chapter_title"):
-                parts[-1] += f" — {meta['chapter_title']}"
+                parts[-1] += f": {meta['chapter_title']}"
         elif src == "Hull":
             parts.append("Hull")
         else:
@@ -624,7 +632,7 @@ def run_validation_queries():
             "filter": ["Hull"],
         },
         {
-            "q": "Pourquoi utilise-t-on le modèle de Black-Scholes pour les options européennes?",
+            "q": "Why is the Black-Scholes model used for European options?",
             "expected_sources": ["Hull"],
             "filter": None,
         },

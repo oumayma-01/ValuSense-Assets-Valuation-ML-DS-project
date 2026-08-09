@@ -27,34 +27,58 @@ def render_asset_form():
     with st.expander("Market & Structural Features", expanded=True):
         mc1, mc2, mc3 = st.columns(3)
         with mc1:
-            has_market_price = st.checkbox("Has Market Price", value=True)
-            has_cash_flows = st.checkbox("Has Cash Flows", value=False)
-            is_exchange_traded = st.checkbox("Exchange Traded", value=True)
+            has_market_price = st.checkbox(
+                "Has Market Price", value=True,
+                help="Whether an observable market price exists. IFRS 13 Level 1 assets must use that price directly.")
+            has_cash_flows = st.checkbox(
+                "Has Cash Flows", value=False,
+                help="Whether the asset produces predictable cash flows (coupons, dividends, lease payments). Needed for DCF and DDM.")
+            is_exchange_traded = st.checkbox(
+                "Exchange Traded", value=True,
+                help="Whether the asset trades on a public exchange. OTC assets lack transparent pricing under IFRS 13.")
         with mc2:
-            has_options_features = st.checkbox("Has Options Features", value=False)
-            has_credit_risk = st.checkbox("Has Credit Risk", value=False)
-            volatility_available = st.checkbox("Volatility Available", value=True)
+            has_options_features = st.checkbox(
+                "Has Options Features", value=False,
+                help="Whether the asset behaves like an option (a right, not an obligation). This unlocks the option pricing models.")
+            has_credit_risk = st.checkbox(
+                "Has Credit Risk", value=False,
+                help="Whether the issuer could default. Credit-risky assets are valued with a credit model, not plain DCF.")
+            volatility_available = st.checkbox(
+                "Volatility Available", value=True,
+                help="Whether implied or historical volatility data is available. Black-Scholes requires it.")
         with mc3:
-            has_early_exercise = st.checkbox("Early Exercise", value=False)
-            is_path_dependent = st.checkbox("Path Dependent", value=False)
+            has_early_exercise = st.checkbox(
+                "Early Exercise", value=False,
+                help="Whether the option can be exercised before maturity. American options need a Binomial Tree; Black-Scholes cannot handle it.")
+            is_path_dependent = st.checkbox(
+                "Path Dependent", value=False,
+                help="Whether the payoff depends on the price path (for example Asian options). These require Monte-Carlo.")
 
     with st.expander("Quantitative Features", expanded=True):
         q1, q2 = st.columns(2)
         with q1:
-            liquidity = st.slider("Liquidity (0-2)", 0, 2, 2, help="0=Low, 1=Medium, 2=High")
-            data_availability = st.slider("Data Availability (0-2)", 0, 2, 2)
-            ifrs_level = st.slider("IFRS 13 Level", 1, 3, 1)
-            pe_ratio = st.number_input("P/E Ratio", min_value=0.0, value=20.0, format="%.1f")
+            liquidity = st.slider("Liquidity (0-2)", 0, 2, 2,
+                                  help="How easily the asset trades. 0 = illiquid, 2 = highly liquid. Low liquidity downgrades the IFRS level.")
+            data_availability = st.slider("Data Availability (0-2)", 0, 2, 2,
+                                          help="How much pricing data is available. Poor data forces a Level 3 (model-based) valuation.")
+            ifrs_level = st.slider("IFRS 13 Level", 1, 3, 1,
+                                   help="Fair-value hierarchy: Level 1 = quoted market prices, Level 2 = observable inputs, Level 3 = unobservable inputs.")
+            pe_ratio = st.number_input("P/E Ratio", min_value=0.0, value=20.0, format="%.1f",
+                                       help="Price divided by earnings per share. Only relevant for equities.")
             market_cap = st.number_input("Market Cap ($)", min_value=0, value=100_000_000_000,
-                                          step=1_000_000_000, format="%d")
+                                          step=1_000_000_000, format="%d",
+                                          help="Total market value of the company's outstanding shares.")
         with q2:
             maturity_years = st.number_input("Maturity (years)", min_value=-1.0, value=5.0,
-                                              help="-1 = perpetual/no maturity")
+                                              help="-1 = perpetual/no maturity. Options and bonds need a positive maturity to be valued.")
             dividend_yield = st.number_input("Dividend Yield (%)", min_value=0.0, value=0.0,
-                                              format="%.2f") / 100
-            beta = st.number_input("Beta", min_value=0.0, value=1.0, format="%.2f")
+                                              format="%.2f",
+                                              help="Annual dividends as a percentage of the share price. Enter 0 if the stock pays no dividend.") / 100
+            beta = st.number_input("Beta", min_value=0.0, value=1.0, format="%.2f",
+                                   help="Sensitivity of the asset to market moves. Used for equities, not for options or bonds.")
             implied_vol = st.number_input("Implied Volatility (%)", min_value=0.0, value=25.0,
-                                           format="%.1f") / 100
+                                           format="%.1f",
+                                           help="The market's expectation of future price swings, in percent. Options need it to be priced.") / 100
 
     features = {
         "has_market_price": int(has_market_price),
@@ -79,6 +103,50 @@ def render_asset_form():
     }
 
     return features
+
+
+def validate_features(features):
+    """Return a list of human-readable problems with the entered asset description.
+
+    Surfaced as inline validation errors so a contradictory input fails clearly
+    instead of silently producing a misleading recommendation.
+    """
+    issues = []
+    ac = features.get("asset_class", "")
+    maturity = features.get("maturity_years", 0)
+
+    if features.get("has_market_price") == 1 and features.get("ifrs_level") == 3:
+        issues.append(
+            "This asset has a market price but IFRS Level 3 is selected. A Level 3 asset is "
+            "valued from unobservable inputs; if a market price exists it should typically be "
+            "Level 1 or Level 2."
+        )
+
+    if maturity < 0 and ac in ("Option", "Bond", "Derivative"):
+        issues.append(
+            f"'{ac}' is set to have no maturity (maturity = {maturity}). Options, bonds and "
+            "derivatives need a positive maturity to be valued."
+        )
+
+    if features.get("has_options_features") == 1 and features.get("implied_volatility_atm", 0) <= 0:
+        issues.append(
+            "This asset has option features but implied volatility is 0%. Option pricing "
+            "(Black-Scholes, Binomial Tree) requires a positive volatility."
+        )
+
+    if ac == "Bond" and features.get("has_cash_flows") == 0:
+        issues.append(
+            "A bond usually produces cash flows (coupons). With no cash flows, DCF and DDM "
+            "cannot apply and the recommendation may be misleading."
+        )
+
+    if features.get("has_early_exercise") == 1 and features.get("is_path_dependent") == 1:
+        issues.append(
+            "Early exercise and path dependency are both selected. These are unusual to "
+            "combine; please check the asset description."
+        )
+
+    return issues
 
 
 def render_valuation_params(method):

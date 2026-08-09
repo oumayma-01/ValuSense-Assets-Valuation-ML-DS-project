@@ -1,13 +1,15 @@
 import streamlit as st
 
+from utils.theme import badge, render_stat_cards
+
 
 def render_calibrated_badge(confidence):
     if confidence >= 0.8:
-        return "green", "High Confidence"
+        return "success", "High Confidence"
     elif confidence >= 0.6:
-        return "orange", "Medium Confidence"
+        return "warning", "Medium Confidence"
     else:
-        return "red", "Low Confidence"
+        return "warning", "Low Confidence"
 
 
 def render_recommendation(result):
@@ -21,26 +23,21 @@ def render_recommendation(result):
 
     col1, col2 = st.columns([1, 1])
     with col1:
-        color, label = render_calibrated_badge(confidence)
-        st.markdown(
-            f"<div style='background:{color};color:white;"
-            f"padding:0.5rem 1rem;border-radius:0.5rem;"
-            f"text-align:center;font-size:1.5rem;font-weight:bold'>"
-            f"{method} — {confidence:.1%}<br><span style='font-size:0.9rem'>{label}</span></div>",
-            unsafe_allow_html=True,
-        )
+        tone, label = render_calibrated_badge(confidence)
+        render_stat_cards([
+            {"label": "Recommended method", "value": method, "tone": "accent"},
+            {"label": "Confidence", "value": f"{confidence:.1%}", "tone": tone, "caption": label},
+        ], columns=2)
         if is_low:
             st.markdown(
-                f"<div style='background:orange;color:black;padding:0.25rem 0.75rem;"
-                f"border-radius:0.5rem;display:inline-block;font-weight:bold;'>"
-                f"⚠ Uncertain — see alternatives</div>",
+                badge("Uncertain: see alternatives", tone="warning", icon="⚠"),
                 unsafe_allow_html=True,
             )
         nn = result.get("nearest_neighbor")
         if nn:
             st.caption(f"Closest known: *{nn['label']}* (distance={nn['distance']:.4f})")
 
-        st.markdown(f"**ML Prediction:** {ml_pred}")
+        st.markdown(f"**ML Prediction:** `{ml_pred}`")
         if ifrs_override:
             st.error(f"Regulatory Override Applied: {ifrs_rule}")
         else:
@@ -59,7 +56,7 @@ def render_recommendation(result):
 
     drivers = result.get("explanation", {}).get("top_drivers", [])
     if drivers:
-        with st.expander("SHAP Waterfall — Top Drivers", expanded=False):
+        with st.expander("SHAP Waterfall: Top Drivers", expanded=False):
             for d in drivers:
                 impact = d["shap_impact"]
                 direction = "▲" if impact > 0 else "▼"
@@ -71,8 +68,6 @@ def render_valuation(val_result):
         st.info("No valuation parameters provided. Recommend only.")
         return
 
-    st.markdown("### Valuation Result")
-
     if "error" in val_result:
         st.error(val_result["error"])
         return
@@ -83,15 +78,23 @@ def render_valuation(val_result):
     price_keys = {"price": "Price", "fair_value": "Fair Value", "forward_price": "Forward Price",
                   "forward_rate": "Forward Rate", "fair_value_per_share": "Fair Value per Share"}
 
+    price_stats = []
     for key, label in price_keys.items():
         if key in val_result and val_result[key] is not None:
-            st.metric(label, f"${val_result[key]:,.4f}")
+            price_stats.append({
+                "label": label,
+                "value": f"${val_result[key]:,.4f}",
+                "tone": "accent",
+            })
+    if price_stats:
+        render_stat_cards(price_stats, columns=len(price_stats))
 
     if "greeks" in val_result:
         g = val_result["greeks"]
-        cols = st.columns(5)
-        for i, (k, v) in enumerate(g.items()):
-            cols[i].metric(k.capitalize(), f"{v:.4f}")
+        render_stat_cards([
+            {"label": k.capitalize(), "value": f"{v:.4f}", "tone": "neutral"}
+            for k, v in g.items()
+        ], columns=len(g))
 
     if "std_error" in val_result:
         st.caption(f"Standard Error: {val_result['std_error']:.4f}")

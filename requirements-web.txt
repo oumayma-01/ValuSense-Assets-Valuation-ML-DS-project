@@ -1,13 +1,28 @@
 # Core
-numpy>=1.21
-pandas>=1.3
-scipy>=1.7
-scikit-learn>=1.0
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.6.1
 
 # ML
-xgboost>=1.6
-shap>=0.40
-joblib>=1.1
+xgboost==2.1.4
+shap==0.49.1
+joblib==1.5.3
 
 # Web interface
-streamlit>=1.28
+streamlit==1.50.0
+python-dotenv==1.2.1
+
+# AI Assistant (LLM client — OpenAI-compatible, works with x.ai / Anthropic / OpenAI)
+# >=1.55.0 required: earlier versions pass the removed `proxies=` kwarg to
+# httpx.Client, which crashes with httpx 0.28+ ("init() got an unexpected
+# keyword argument 'proxies'").
+openai==1.109.1
+
+# AI Assistant (RAG retrieval — needed for knowledge-base answers)
+# NOTE: pysqlite3-binary is intentionally NOT pinned here — it has no
+# Windows / Python 3.9 wheel and only exists as a workaround for Linux
+# environments with an old system sqlite. chromadb works with the stdlib
+# sqlite3 on Windows and on Python >= 3.9.
+chromadb==1.5.9
+sentence-transformers==5.1.2

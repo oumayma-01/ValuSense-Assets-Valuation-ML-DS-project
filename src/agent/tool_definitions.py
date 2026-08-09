@@ -7,11 +7,11 @@ TOOL_DEFINITIONS = [
             "properties": {
                 "features": {
                     "type": "object",
-                    "description": "Dictionary of asset features. At minimum must include: asset_class (string: Option|Equity|Bond|Commodity|Currency|Derivative), asset_subclass (string), ifrs_level (1|2|3), has_market_price (0|1), has_cash_flows (0|1), has_options_features (0|1), is_exchange_traded (0|1), liquidity (0|1|2), maturity_years (float), volatility_available (0|1), data_availability (0|1|2). All 28 features will be auto-defaulted if missing.",
+                    "description": "Dictionary of asset features. At minimum must include: asset_class (string: Option|Equity|Bond|Commodity|Currency|Derivative), asset_subclass (string), ifrs_level (1|2|3), has_market_price (0|1), has_cash_flows (0|1), has_options_features (0|1), is_exchange_traded (0|1), liquidity (0|1|2), maturity_years (float), volatility_available (0|1), data_availability (0|1|2). All 28 features will be auto-defaulted if missing. Prefer passing the full features dict; if you provide the feature fields directly at the top level instead, they will be accepted.",
                     "additionalProperties": True,
                 }
             },
-            "required": ["features"],
+            "required": [],
         },
     },
     {
@@ -26,10 +26,11 @@ TOOL_DEFINITIONS = [
                 },
                 "features": {
                     "type": "object",
-                    "description": "Same features dict used in classify_asset. Required fields: asset_class_encoded, ifrs_level, has_market_price, has_cash_flows, has_options_features, has_early_exercise, is_path_dependent, has_credit_risk, liquidity, dividend_yield, pe_ratio.",
+                    "description": "Same features dict used in classify_asset. Required fields: asset_class_encoded, ifrs_level, has_market_price, has_cash_flows, has_options_features, has_early_exercise, is_path_dependent, has_credit_risk, liquidity, dividend_yield, pe_ratio. May also be provided as top-level fields.",
+                    "additionalProperties": True,
                 },
             },
-            "required": ["predicted_method", "features"],
+            "required": ["predicted_method"],
         },
     },
     {
@@ -40,14 +41,15 @@ TOOL_DEFINITIONS = [
             "properties": {
                 "features": {
                     "type": "object",
-                    "description": "Same features dict used in classify_asset.",
+                    "description": "Same features dict used in classify_asset. May also be provided as top-level fields.",
+                    "additionalProperties": True,
                 },
                 "method": {
                     "type": "string",
                     "description": "Optional. The method to explain. If omitted, explains whatever the model predicted.",
                 },
             },
-            "required": ["features"],
+            "required": [],
         },
     },
     {

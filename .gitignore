@@ -1,4 +1,24 @@
+# Local secrets — never commit
 .env
 .env.*
 *.env
 *.env.*
+!.env.example
+
+# Streamlit secrets (Community Cloud / local)
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Local run artifacts
+catboost_info/
+reports/screenshots/
+
+# OS
+.DS_Store
+Thumbs.db

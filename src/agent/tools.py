@@ -13,13 +13,9 @@ from valusense.ifrs import apply_ifrs_constraints_v3
 
 
 def _validate_features(features: dict) -> dict:
-    known = set(FEATURE_NAMES)
-    provided = set(features.keys())
-    missing = known - provided - {"asset_class_encoded", "asset_subclass_encoded"}
-    if missing:
-        return {"error": f"Missing required features: {sorted(missing)}"}
-    if features.get("ifrs_level") not in (1, 2, 3):
-        return {"error": f"ifrs_level must be 1, 2, or 3, got {features.get('ifrs_level')}"}
+    ifrs = features.get("ifrs_level")
+    if ifrs is not None and ifrs not in (1, 2, 3):
+        return {"error": f"ifrs_level must be 1, 2, or 3, got {ifrs}"}
     return {}
 
 
@@ -78,7 +74,7 @@ def classify_asset(features: dict) -> dict:
     rec = result["recommendation"]
     return {
         "asset_class": ac_name or "Unknown",
-        "asset_subclass": sc_name or "—",
+        "asset_subclass": sc_name or "Not specified",
         "predicted_method": rec["method"],
         "calibrated_confidence": round(rec["confidence"], 4),
         "is_low_confidence": rec.get("is_low_confidence", False),

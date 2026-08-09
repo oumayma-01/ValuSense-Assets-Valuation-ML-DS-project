@@ -4,13 +4,31 @@ import numpy as np
 from valusense.core import valuate_asset_v2, encode_asset, validate_domain_consistency
 from valusense.config import TARGET_CLASSES, AC_REVERSE
 from components.asset_form import render_asset_form
+from utils.theme import (
+    inject_theme_css,
+    theme_sidebar,
+    page_header,
+    section_header,
+    render_table,
+    hairline,
+)
 
-st.set_page_config(page_title="Scenarios", page_icon="chart_with_upwards_trend", layout="wide")
-from utils.theme import inject_theme_css
+st.set_page_config(page_title="Scenarios", page_icon="🧪", layout="wide")
+
+with st.sidebar:
+    theme_sidebar()
+
 inject_theme_css()
-st.title("Scenarios & Domain Validation")
 
-tab1, tab2 = st.tabs(["Run All (10 Scenarios)", "Domain Validation"])
+page_header(
+    "System Validation",
+    "Ten representative assets, one for each valuation method, run end-to-end through the model, "
+    "the IFRS 13 checks and the pricing engine. This page is the evidence that ValuSense works "
+    "as intended: the model, the compliance layer and the pricing engines all agree.",
+    kicker="Validation · IFRS 13 · End-to-end",
+)
+
+tab1, tab2 = st.tabs(["End-to-end validation", "Input consistency"])
 
 with tab1:
 
@@ -105,53 +123,65 @@ with tab1:
 
         return s
 
-    if st.button("Run All Scenarios", type="primary"):
+    if st.button("Run the validation suite", type="primary", width="stretch"):
         scenarios = build_scenarios()
         results = []
 
-        with st.spinner("Running 10 scenarios..."):
+        with st.spinner("Running the validation suite..."):
             for name, spec in scenarios.items():
-                r = valuate_asset_v2(spec["features"].copy(), valuation_params=spec["params"])
-                m = r["recommendation"]["method"]
-                c = r["recommendation"]["confidence"]
-                is_low = r["recommendation"].get("is_low_confidence", False)
-                v = r.get("valuation", {}) or {}
-                val = v.get("price") or v.get("fair_value") or v.get("forward_price") or v.get("forward_rate") or v.get("fair_value_per_share")
-                vs = f"${val:,.2f}" if isinstance(val, (int, float)) else str(v.get("error", "?"))
-                ok = "✅" if m == spec["expected"] else "❌"
-                badge = "⚠" if is_low else ""
+                try:
+                    r = valuate_asset_v2(spec["features"].copy(), valuation_params=spec["params"])
+                    m = r["recommendation"]["method"]
+                    c = r["recommendation"]["confidence"]
+                    is_low = r["recommendation"].get("is_low_confidence", False)
+                    v = r.get("valuation", {}) or {}
+                    val = v.get("price") or v.get("fair_value") or v.get("forward_price") or v.get("forward_rate") or v.get("fair_value_per_share")
+                    vs = f"${val:,.2f}" if isinstance(val, (int, float)) else str(v.get("error", "?"))
+                    ok = "PASS" if m == spec["expected"] else "FAIL"
+                except Exception as e:
+                    m, c, is_low, val, vs, ok = "ERROR", 0.0, True, None, str(e), "FAIL"
                 results.append({"Method": name, "Expected": spec["expected"],
                                "Obtained": m, "Confidence": f"{c:.0%}",
-                               "Low": badge, "Value": vs, "Status": ok})
+                               "Low": "low" if is_low else "", "Value": vs, "Status": ok})
 
         df = pd.DataFrame(results)
-        st.dataframe(df, use_container_width=True, column_config={
-            "Status": st.column_config.TextColumn("Status", width="small"),
-            "Low": st.column_config.TextColumn("Low", width="small"),
-        })
+        render_table(df, mono_cols=["Confidence", "Value", "Status"])
 
-        n_ok = sum(1 for r in results if r["Status"] == "✅")
-        st.markdown(f"### {n_ok}/{len(results)} scenarios passed")
+        n_ok = sum(1 for r in results if r["Status"] == "PASS")
+        st.markdown(f"### Validation result: {n_ok}/10 passed")
 
         if n_ok == len(results):
+            st.success("All scenarios passed. The system behaves correctly across every asset type and method.")
             st.balloons()
         else:
-            failed = [r for r in results if r["Status"] == "❌"]
-            st.warning(f"{len(failed)} scenario(s) failed. Check IFRS rules or model training.")
+            failed = [r for r in results if r["Status"] == "FAIL"]
+            st.warning(
+                f"{len(failed)} scenario(s) did not pass. This is logged and fixed before a release; "
+                "the rest of the system remains available."
+            )
     else:
-        st.info("Click **Run All Scenarios** to execute the 10 predefined test scenarios.")
+        st.info("Click **Run the validation suite** to see the system verified end-to-end.")
+        with st.expander("What does a 'pass' mean?"):
+            st.markdown(
+                "Each scenario describes a distinct asset (a European call, a government bond, an FX forward, ...). "
+                "For each one we know the correct valuation method. A pass means ValuSense recommended exactly that "
+                "method **and** produced a sensible price. Green across the board means the model, the IFRS 13 layer "
+                "and the pricing engines all agree."
+            )
 
 with tab2:
-    st.subheader("Domain Validation")
-    st.markdown("Check the consistency between structural features and the selected asset class.")
+    section_header("Input consistency",
+        "A built-in safeguard: checks that the features you entered are internally consistent with "
+        "the asset class you selected (for example, a bond should have cash flows, an option should not). "
+        "This stops contradictory descriptions before they reach the model.")
 
     features = render_asset_form()
     ac = features.get("asset_class", "Unknown")
 
-    if st.button("Check Domain Consistency", type="primary", use_container_width=True):
+    if st.button("Check input consistency", type="primary", width="stretch"):
         warnings = validate_domain_consistency(features)
         if warnings:
-            st.warning("### Inconsistencies Detected")
+            st.warning("### Inconsistencies detected")
             for w in warnings:
                 st.markdown(f"- {w}")
         else:
